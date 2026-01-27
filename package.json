@@ -1,0 +1,37 @@
+{
+  "name": "eleventy-structured-content-starter",
+  "version": "0.0.0",
+  "description": "A component-based, structured content starter for Eleventy",
+  "type": "module",
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "starter",
+    "components",
+    "structured-content",
+    "static-site-generator"
+  ],
+  "author": "werner@glinka.co",
+  "license": "MIT",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "NODE_ENV=production eleventy",
+    "dev": "eleventy",
+    "clean": "rm -rf _site",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "eleventy-plugin-components-bundler": "^0.0.1",
+    "eleventy-plugin-normalized-collections": "^0.0.3",
+    "marked": "^17.0.1",
+    "picomatch": "^4.0.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

@@ -1,0 +1,54 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- set baseUrl = site.url | replace(r/\/$/, '') %}
+{%- set defaultPriority = site.sitemap.priority | default(0.5) %}
+{%- set defaultChangefreq = site.sitemap.changefreq | default('monthly') %}
+
+{#- Loop through all pages #}
+{%- for item in collections.all %}
+  {#- Skip pages without URLs or explicitly excluded #}
+  {%- if item.url and not item.data.eleventyExcludeFromCollections and not item.data.draft %}
+  <url>
+    <loc>{{ baseUrl }}{{ item.url }}</loc>
+    {#- Last modified - use page date or build time #}
+    {%- if item.date %}
+    <lastmod>{{ item.date | isoDate }}</lastmod>
+    {%- endif %}
+    {#- Priority - use page-specific or calculate from URL depth #}
+    {%- set urlDepth = item.url | split('/') | length - 2 %}
+    {%- if item.url == '/' or item.url == '/de/' %}
+      {%- set priority = 1.0 %}
+    {%- elif urlDepth <= 1 %}
+      {%- set priority = 0.8 %}
+    {%- elif urlDepth == 2 %}
+      {%- set priority = 0.6 %}
+    {%- else %}
+      {%- set priority = defaultPriority %}
+    {%- endif %}
+    <priority>{{ item.data.sitemap.priority | default(priority) }}</priority>
+    <changefreq>{{ item.data.sitemap.changefreq | default(defaultChangefreq) }}</changefreq>
+    {#- hreflang links for multilingual pages #}
+    {%- if item.data.seo and item.data.seo.alternate %}
+      {#- Current page's language #}
+      {%- set currentLang = item.data.lang | default('en') %}
+    <xhtml:link rel="alternate" hreflang="{{ currentLang }}" href="{{ baseUrl }}{{ item.url }}" />
+      {#- Alternate language versions #}
+      {%- for langCode, altPath in item.data.seo.alternate %}
+    <xhtml:link rel="alternate" hreflang="{{ langCode }}" href="{{ baseUrl }}{{ altPath }}" />
+      {%- endfor %}
+      {#- x-default points to English version #}
+      {%- if currentLang == 'de' %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ baseUrl }}{{ item.data.seo.alternate.en }}" />
+      {%- else %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ baseUrl }}{{ item.url }}" />
+      {%- endif %}
+    {%- endif %}
+  </url>
+  {%- endif %}
+{%- endfor %}
+</urlset>

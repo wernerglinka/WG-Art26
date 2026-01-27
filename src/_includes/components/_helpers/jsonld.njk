@@ -1,0 +1,134 @@
+{#
+  JSON-LD Structured Data Generator
+
+  Generates schema.org structured data based on seo.schemaType in frontmatter.
+
+  Supported schema types:
+    - WebSite: Homepage with site info
+    - WebPage: Generic page (default)
+    - VisualArtwork: Artwork pages with creator info
+    - Article: Blog posts/studio notes with dates
+    - Person: About/profile pages
+
+  Usage in frontmatter:
+    seo:
+      schemaType: VisualArtwork
+      artMedium: 'Mixed media assemblage'
+#}
+
+{% set schemaType = seo.schemaType | default('WebPage') %}
+
+{# Common variables #}
+{% set schemaName = seo.title | default(site.title) %}
+{% set schemaDescription = seo.description | default(site.description) %}
+{% set schemaImage = baseUrl + (seo.socialImage | default(site.defaultImage)) %}
+
+{# WebSite schema for homepage #}
+{% if schemaType == 'WebSite' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.title | dump | safe }},
+  "url": {{ baseUrl | dump | safe }},
+  "description": {{ site.description | dump | safe }},
+  "inLanguage": {{ (lang | default('en')) | dump | safe }},
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.siteOwner | dump | safe }}
+    {%- if site.organization.sameAs %},
+    "sameAs": {{ site.organization.sameAs | dump | safe }}
+    {%- endif %}
+  }
+}
+</script>
+
+{# VisualArtwork schema for artwork pages #}
+{% elif schemaType == 'VisualArtwork' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VisualArtwork",
+  "name": {{ schemaName | dump | safe }},
+  "description": {{ schemaDescription | dump | safe }},
+  "url": {{ canonicalUrl | dump | safe }},
+  "image": {{ schemaImage | dump | safe }},
+  "inLanguage": {{ (lang | default('en')) | dump | safe }},
+  "creator": {
+    "@type": "Person",
+    "name": {{ site.siteOwner | dump | safe }}
+    {%- if site.organization.sameAs %},
+    "sameAs": {{ site.organization.sameAs | dump | safe }}
+    {%- endif %}
+  }
+  {%- if seo.artMedium %},
+  "artMedium": {{ seo.artMedium | dump | safe }}
+  {%- endif %}
+  {%- if seo.dateCreated %},
+  "dateCreated": {{ seo.dateCreated | dump | safe }}
+  {%- endif %}
+}
+</script>
+
+{# Article schema for blog posts/studio notes #}
+{% elif schemaType == 'Article' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ schemaName | dump | safe }},
+  "description": {{ schemaDescription | dump | safe }},
+  "url": {{ canonicalUrl | dump | safe }},
+  "image": {{ schemaImage | dump | safe }},
+  "inLanguage": {{ (lang | default('en')) | dump | safe }},
+  "author": {
+    "@type": "Person",
+    "name": {{ (seo.author | default(site.siteOwner)) | dump | safe }}
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.siteOwner | dump | safe }}
+  }
+  {%- if card.date %},
+  "datePublished": {{ card.date | dump | safe }}
+  {%- endif %}
+  {%- if seo.dateModified %},
+  "dateModified": {{ seo.dateModified | dump | safe }}
+  {%- endif %}
+}
+</script>
+
+{# Person schema for about/profile pages #}
+{% elif schemaType == 'Person' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.siteOwner | dump | safe }},
+  "url": {{ canonicalUrl | dump | safe }},
+  "description": {{ schemaDescription | dump | safe }}
+  {%- if schemaImage %},
+  "image": {{ schemaImage | dump | safe }}
+  {%- endif %}
+  {%- if site.organization.sameAs %},
+  "sameAs": {{ site.organization.sameAs | dump | safe }}
+  {%- endif %}
+}
+</script>
+
+{# WebPage schema (default) #}
+{% else %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": {{ schemaName | dump | safe }},
+  "description": {{ schemaDescription | dump | safe }},
+  "url": {{ canonicalUrl | dump | safe }},
+  "inLanguage": {{ (lang | default('en')) | dump | safe }}
+  {%- if schemaImage %},
+  "image": {{ schemaImage | dump | safe }}
+  {%- endif %}
+}
+</script>
+{% endif %}

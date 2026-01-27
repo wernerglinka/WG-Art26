@@ -1,0 +1,67 @@
+/**
+ * Multi Media Section Styles
+ */
+
+.section-wrapper.multi-media {
+  .content {
+    --threshold: 50rem;
+
+    column-gap: 0;
+    container-type: inline-size;
+
+    .text {
+      padding: var(--space-s-l);
+      overflow: hidden;
+    }
+
+    .media,
+    .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .icon-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: 80%;
+        height: auto;
+        stroke: var(--color-text);
+      }
+    }
+
+    .custom-audio-player {
+      height: 100%;
+    }
+  }
+
+  &.with-background-image {
+    &.in-container .background-image {
+      border-radius: var(--glass-border-radius);
+    }
+
+    .multi-media.content {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      height: 100%;
+      width: 100%;
+      max-width: var(--wrapper-max-width, 85rem);
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+
+      .text {
+        max-width: 50%;
+        top: auto;
+        bottom: calc(var(--space-s-m) * -1);
+      }
+
+      .image {
+        display: none;
+      }
+    }
+  }
+}

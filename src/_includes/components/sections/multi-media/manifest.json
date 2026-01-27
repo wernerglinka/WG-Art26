@@ -1,0 +1,7 @@
+{
+  "name": "multi-media",
+  "type": "section",
+  "styles": ["multi-media.css"],
+  "scripts": [],
+  "requires": ["ctas", "text", "icon", "image"]
+}

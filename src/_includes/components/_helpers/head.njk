@@ -1,0 +1,103 @@
+<head>
+  <meta name="verify-v1" content="{{ site.validate.google }}" />
+  <meta name="msvalidate.01" content="{{ site.validate.ms }}" />
+  <meta name="generator" value="Eleventy" />
+
+  {# Canonical URL - use page-specific or construct from site URL + page URL #}
+  {% set baseUrl = site.url | replace(r/\/$/, '') %}
+  {% set canonicalUrl = seo.canonicalURL if seo.canonicalURL else baseUrl + page.url %}
+  <link rel="canonical" href="{{ canonicalUrl }}" />
+
+  {# hreflang tags for multilingual SEO #}
+  {% if seo.alternate %}
+    {# Current page's language version #}
+    <link rel="alternate" hreflang="{{ lang | default('en') }}" href="{{ baseUrl + page.url }}" />
+    {# Alternate language versions #}
+    {% for langCode, altPath in seo.alternate %}
+      <link rel="alternate" hreflang="{{ langCode }}" href="{{ baseUrl + altPath }}" />
+    {% endfor %}
+    {# x-default points to the default language (English) #}
+    {% if lang == 'de' %}
+      <link rel="alternate" hreflang="x-default" href="{{ baseUrl + seo.alternate.en }}" />
+    {% else %}
+      <link rel="alternate" hreflang="x-default" href="{{ baseUrl + page.url }}" />
+    {% endif %}
+  {% endif %}
+
+  <meta charset="utf-8" />
+  <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta httpEquiv="cleartype" content="on" />
+  <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width" />
+
+  {# Page title - use SEO title, fall back to site title #}
+  {% set pageTitle = seo.title if seo.title else site.title %}
+  {% set pageDescription = seo.description if seo.description else site.description %}
+  {% set pageImage = seo.socialImage if seo.socialImage else site.defaultImage %}
+  {% set pageImageUrl = baseUrl + pageImage if pageImage else '' %}
+
+  <title>{{ pageTitle }}</title>
+  {# Meta description - use SEO description, fall back to site description #}
+  <meta name="description" content="{{ pageDescription }}" />
+  <meta name="author" content="{{ site.siteOwner }}" />
+  <meta name="generator" content="Eleventy" />
+
+  {# Open Graph tags for social sharing #}
+  <meta property="og:title" content="{{ pageTitle }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ canonicalUrl }}" />
+  <meta property="og:description" content="{{ pageDescription }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  {% if pageImageUrl %}
+  <meta property="og:image" content="{{ pageImageUrl }}" />
+  {% endif %}
+  {% if site.locale %}
+  <meta property="og:locale" content="{{ site.locale }}" />
+  {% endif %}
+
+  {# Twitter Card tags #}
+  <meta name="twitter:card" content="summary_large_image" />
+  {% if site.social.twitterSite %}
+  <meta name="twitter:site" content="{{ site.social.twitterSite }}" />
+  {% endif %}
+  {% if site.social.twitterCreator %}
+  <meta name="twitter:creator" content="{{ site.social.twitterCreator }}" />
+  {% endif %}
+  <meta name="twitter:title" content="{{ pageTitle }}" />
+  <meta name="twitter:description" content="{{ pageDescription }}" />
+  {% if pageImageUrl %}
+  <meta name="twitter:image" content="{{ pageImageUrl }}" />
+  {% endif %}
+
+  {# Icons #}
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Open+Sans:wght@300;500&display=swap"
+  />
+  <link rel="stylesheet" href="/assets/main.css" />
+
+  {# JSON-LD structured data #}
+  {% include "components/_helpers/jsonld.njk" %}
+</head>

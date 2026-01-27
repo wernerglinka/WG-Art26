@@ -1,0 +1,24 @@
+{% macro breadcrumbs( breadcrumbs, urlPath ) %}
+  {# Determine current language from URL path #}
+  {% set isGerman = urlPath and urlPath.length >= 4 and urlPath.substring(0, 4) == '/de/' %}
+
+  {# Don't show breadcrumbs on homepages (/ or /de/) #}
+  {% set isHomepage = urlPath == '/' or urlPath == '/de/' %}
+
+  {% if breadcrumbs and breadcrumbs.length > 1 and not isHomepage %}
+    <ul class="breadcrumbs" aria-label="Breadcrumb">
+      {% for crumb in breadcrumbs %}
+        {# On German pages, skip the root "/" crumb since /de/ serves as home #}
+        {% if not (crumb.path == '/' and isGerman) %}
+        <li>
+          {% if loop.last %}
+          <span aria-current="page">{{ crumb.title }}</span>
+          {% else %}
+          <a href="{{ crumb.path }}">{{ crumb.title }}</a>
+          {% endif %}
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,33 @@
+{
+  "title": "Werner Glinka - Mixed Media Artist",
+  "description": "Mixed media assemblages by Werner Glinka, using found and discarded materials.",
+  "url": "https://www.wernerglinka.com/",
+  "locale": "en_US",
+
+  "defaultImage": "/assets/images/artworks/2007/2007.01.001.jpg",
+
+  "organization": {
+    "name": "Werner Glinka",
+    "sameAs": [
+      "https://wernerglinka.substack.com/",
+      "https://bsky.app/profile/wernerglinka.bsky.social",
+      "https://www.linkedin.com/in/werner-glinka-2a427/"
+    ]
+  },
+
+  "social": {
+    "twitterCreator": "@author",
+    "locale": "en_US"
+  },
+
+  "sitemap": {
+    "changefreq": "weekly",
+    "priority": 0.8
+  },
+
+  "siteOwner": "Werner Glinka",
+  "validate": {
+    "google": "",
+    "ms": ""
+  }
+}

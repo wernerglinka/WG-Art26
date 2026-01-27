@@ -1,0 +1,23 @@
+{
+  "name": "collection-pagination",
+  "type": "partial",
+  "styles": ["collection-pagination.css"],
+  "scripts": [],
+  "requires": [],
+  "validation": {
+    "required": ["numberOfPages", "pageNumber", "domain"],
+    "properties": {
+      "numberOfPages": {
+        "type": "number",
+        "minimum": 1
+      },
+      "pageNumber": {
+        "type": "number",
+        "minimum": 1
+      },
+      "domain": {
+        "type": "string"
+      }
+    }
+  }
+}

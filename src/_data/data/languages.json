@@ -1,0 +1,8 @@
+{
+  "defaultLang": "en",
+  "fallbackUrl": "/",
+  "available": [
+    { "code": "en", "label": "English" },
+    { "code": "de", "label": "Deutsch" }
+  ]
+}

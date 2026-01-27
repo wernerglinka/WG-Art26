@@ -1,0 +1,38 @@
+{% from "components/_partials/branding/branding.njk" import branding %}
+{% from "components/_partials/navigation/navigation.njk" import navigation %}
+{% from "components/_partials/language-switcher/language-switcher.njk" import languageSwitcher %}
+
+{# Get urlPath from context or directly from page.url #}
+{% set currentUrl = urlPath if urlPath else page.url %}
+
+{# Get mainMenu from context (when rendered via sections) or from collections (when included directly) #}
+{% set menu = mainMenu if mainMenu else collections.mainMenu %}
+
+<div class="header-wrapper{% if topMessage and not topMessage.disable %} has-top-message{% endif %}">
+  {% if topMessage and not topMessage.disable %}
+    <div class="top-message">
+      <p class="top-message-text">
+        {{ topMessage.text }}
+        {% if topMessage.link %}
+          <a href="{{ topMessage.link.url }}">{{ topMessage.link.label }}</a>
+        {% endif %}
+      </p>
+      {% if topMessage.dismissible !== false %}
+        <button type="button" class="top-message-close" aria-label="Dismiss message">
+          {% include "icons/x.njk" %}
+        </button>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <header>
+      {% set link = site.branding.link %}
+      {% set img = site.branding.logo %}
+
+      {{ branding( link, img ) }}
+
+      {{ navigation( menu, currentUrl )}}
+
+      {{ languageSwitcher(data.languages.available, data.languages.defaultLang, data.languages.fallbackUrl, seo.alternate) }}
+  </header>
+</div>

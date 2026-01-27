@@ -1,0 +1,5 @@
+{
+  "componentsBasePath": "src/_includes/components",
+  "sectionsDir": "sections",
+  "partialsDir": "_partials"
+}

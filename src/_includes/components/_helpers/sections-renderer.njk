@@ -1,0 +1,40 @@
+{% from "components/_helpers/build-container-attributes.njk" import buildContainerAttributes %}
+{% from "components/_helpers/render-section.njk" import renderSection %}
+
+{# Build context object with all data needed by section components #}
+{# The 'data' variable comes from Eleventy's data cascade via _data/data/ folder #}
+{# mainMenu comes from collections.mainMenu (created by normalized-collections plugin) #}
+{# Navigation (previous/next) is accessed via collection[name].previous/next #}
+{# pagingParams comes from normalized-collections plugin for paginated pages #}
+{% set context = {
+  data: data,
+  collections: collections,
+  mainMenu: collections.mainMenu,
+  urlPath: page.url,
+  collection: collection,
+  pagingParams: pagingParams
+} %}
+
+{# loop through all sections and render them #}
+{% for section in sections %}
+  {# don't render section if disabled in frontmatter #}
+  {% if not section.isDisabled %}
+
+    {# section wrapper may be article, aside, section or div depending on section.containerTag setting #}
+    <{{ section.containerTag }} id="{{ section.id }}"  {{ buildContainerAttributes(section, loop.first) }}>
+
+      {# if section has background add a background image #}
+      {% if section.containerFields.background.image %}
+        <div class="background-image" style="background-image: url({{ section.containerFields.background.image }})"></div>
+      {% endif %}
+
+      {# section content #}
+      {{ renderSection(section, navigation.breadcrumbs, context) }}
+
+      {% set containerTag = section.containerTag %}
+    </{{ containerTag }}>
+
+  {% endif %}
+{% else %}
+  <p class="error-message">There are no sections available</p>
+{% endfor %}

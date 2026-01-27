@@ -1,0 +1,31 @@
+{#
+  render-section is a nunjucks macro that uses the 'section.sectionType' parameter
+  to compose the name of the target component macro.
+  Since Nunjucks doesn't support dynamic macro names, we have to use a helper
+  function to do this. We also pass the required meta data through, e.g., crumbs,
+  data, collections, etc.
+#}
+
+{% macro renderSection(section, crumbs, context) %}
+  {# Extract context properties for use in included templates #}
+  {% set data = context.data %}
+  {% set collections = context.collections %}
+  {% set mainMenu = context.mainMenu %}
+  {% set urlPath = context.urlPath %}
+  {% set collection = context.collection %}
+  {% set pagingParams = context.pagingParams %}
+  {# Note: previous/next navigation is accessed via collection[name].previous/next #}
+
+  {# Check if the component exists before including #}
+  {% if section.sectionType | componentExists %}
+    {% include "components/sections/" + section.sectionType + "/" + section.sectionType + ".njk" ignore missing %}
+  {% else %}
+    {# Show warning in development mode only #}
+    {% if env.NODE_ENV != 'production' %}
+      <div class="component-warning" style="padding: 1rem; margin: 1rem; border: 2px dashed #f59e0b; background: #fef3c7; color: #92400e;">
+        <strong>Warning:</strong> Component "{{ section.sectionType }}" not found at
+        <code>components/sections/{{ section.sectionType }}/{{ section.sectionType }}.njk</code>
+      </div>
+    {% endif %}
+  {% endif %}
+{% endmacro %}
