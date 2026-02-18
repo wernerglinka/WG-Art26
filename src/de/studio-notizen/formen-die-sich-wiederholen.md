@@ -44,15 +44,15 @@ sections:
       titleTag: 'h1'
       subTitle: ''
       prose: |-
-        Wenn ich auf Arbeiten aus den mittleren 2000ern zurückschaue, fällt mir etwas auf, das ich nie bewusst gewählt habe. Dieselben Formen tauchen immer wieder auf: Kreise und das, was ich inzwischen die Stadionform nenne — gerade Seiten mit Halbkreisen oben und unten.
+        Wenn ich auf Arbeiten aus den mittleren 2000er-Jahren zurückblicke, fällt mir etwas auf, dessen ich mir nie bewusst war. In meinen Arbeiten tauchen immer wieder dieselben Formen auf: Kreise und das, was ich inzwischen die Stadionform nenne – gerade Seiten mit Halbkreisen oben und unten.
 
-        Ich bin in Gelsenkirchen aufgewachsen, im Pott, umgeben von Industriearchitektur und der Geometrie von Stadien, Fabriken und Zechengeländen. Diese Formen haben sich früh eingebrannt. Ich habe nicht beschlossen, dass das meine Formen werden. Sie kamen einfach immer wieder.
+        Ich bin in Gelsenkirchen aufgewachsen, im Ruhrgebiet, umgeben von Industriearchitektur und der Geometrie von Stadien, Fabriken und Zechenanlagen. Diese Formen haben sich früh eingeprägt. Ich habe sie nie bewusst benutzt. Sie waren einfach da.
 
-        Jetzt, nach zehn Jahren weg vom Atelier, drängen sich dieselben Formen wieder auf — aber anders. Die neuen Arbeiten sind aus laminierter Pappe, beschichtet mit Pappmasse, mit echter Tiefe im Vergleich zu den früheren flachen Assemblagen. Etwa zehn Zentimeter dick, für die Wand gedacht. Sie werfen Schatten, nehmen Raum ein auf eine Art, wie es die früheren Arbeiten nicht konnten.
+        Jetzt, nach zehn Jahren ohne Atelier, tauchen dieselben Formen wieder auf – verändert. Die neuen Arbeiten bestehen aus laminierter Pappe, mit Pappmaché beschichtet, und haben eine echte Tiefe im Vergleich zu den früheren Assemblagen. Etwa zehn Zentimeter stark, für die Wand gedacht. Sie werfen Schatten, nehmen Raum ein – auf eine Weise, die den früheren Arbeiten fehlte.
 
-        Das Stadionstück ist etwa 25 mal 45 Zentimeter. Ein Kreisstück ist auch in Arbeit — 60 Zentimeter Durchmesser mit einem 15-Zentimeter-Loch in der Mitte. Die endgültige Oberfläche steht noch nicht fest. Offenbleiben heißt auch, nicht alles vorher festzulegen.
+        Das Stadionstück misst etwa 25 × 45 Zentimeter. Ein Kreis ist ebenfalls in Arbeit – 60 Zentimeter im Durchmesser, mit einem 15-Zentimeter-Loch in der Mitte. Die endgültige Oberfläche steht noch nicht fest. Offen zu bleiben heißt auch, nicht alles im Voraus festzulegen.
 
-        Andere Materialien, andere Prozesse, dasselbe Ziel. Manche Dinge sucht man sich aus. Andere suchen sich einen.
+        Andere Materialien, andere Prozesse, dasselbe Ziel. Manche Dinge wählt man. Andere wählen einen.
 
   - sectionType: text-only
     containerTag: article
