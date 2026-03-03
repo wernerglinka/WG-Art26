@@ -44,11 +44,11 @@ sections:
       titleTag: 'h1'
       subTitle: ''
       prose: |-
-        Das erste Stück, das beide Materialien zusammen verwendet. Gestapelter Karton dunkel bemalt, Pappmaché-Streifen in der Mitte.
+        Das erste Stück, das beide Materialien zusammen verwendet. Gestapelter, geschwärzter  Karton, Pappmaché-Streifen in der Mitte.
 
-        Die schwarze Farbe erzeugt eine Optik, die an Shou Sugi Ban erinnert, die japanische Technik des Verkohlens von Zedernholz, um es zu konservieren. Das Brennen verwandelt das Holz - schwärzt die Oberfläche und legt die Maserung frei. Hier macht die Farbe etwas Ähnliches. Sie vereinheitlicht den Karton, sodass die Wellpappenstruktur zum Thema wird. Der Rhythmus der Schichten tritt hervor, anstatt zu verschwinden.
+        Die schwarze Farbe erinnert an Shou Sugi Ban, die japanische Technik des Verkohlens von Zedernholz, um es zu konservieren. Das Brennen verwandelt das Holz - schwärzt die Oberfläche und legt die Maserung frei. Hier macht die Farbe etwas Ähnliches. Sie vereinheitlicht den Karton, sodass die Wellpappenstruktur zum Thema wird. Der Rhythmus der Schichten tritt hervor, anstatt zu verschwinden.
 
-        Das Pappmaché ist besser gelungen als erwartet. Der getrocknete Ton hat eine raue, fast geologische Qualität. Er wirkt wie Stein, wie etwas Verwittertes statt Gebautes.
+        Das Pappmaché ist besser gelungen als erwartet. Der getrocknete Ton hat eine raue, fast geologische Qualität. Er wirkt wie Stein, wie etwas Verwittertes, nicht wie etwas Künstliches.
 
         Vier Nieten entlang des Mittelstreifens. Sie suggerieren Ordnung, implizieren Befestigung, aber sie sind dekorativ - eine Anspielung auf industrielle Hardware ohne die Funktion. Sie akzentuieren die Vertikale, ohne sie zu erklären.
 

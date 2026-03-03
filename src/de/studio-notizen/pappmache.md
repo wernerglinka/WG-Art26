@@ -5,14 +5,14 @@ hasHero: true
 
 card:
   title: 'Pappmaché'
-  description: 'Pappmaché-Ton für Skulpturen herstellen. Rezept, Technik und ein Anfängerfehler, den man vermeiden sollte. Dünne Schichten über Schaumstoffkern für kontrolliertes Trocknen.'
+  description: 'Pappmaché-Ton für Skulpturen. Rezept, Technik und ein Anfängerfehler, den man vermeiden sollte. Dünne Schichten über Schaumstoffkern für kontrolliertes Trocknen.'
   date: '2026-01-09'
   author: 'Werner Glinka'
   thumbnail: '/assets/images/studio-notes/the-edges.jpg'
 
 seo:
   title: 'Atelier-Notizen - Pappmaché'
-  description: 'Pappmaché-Ton für Skulpturen herstellen. Rezept, Technik und ein Anfängerfehler, den man vermeiden sollte. Dünne Schichten über Schaumstoffkern für kontrolliertes Trocknen.'
+  description: 'Pappmaché-Ton für Skulpturen. Rezept, Technik und ein Anfängerfehler, den man vermeiden sollte. Dünne Schichten über Schaumstoffkern für kontrolliertes Trocknen.'
   socialImage: '/assets/images/studio-notes/the-edges.jpg'
   canonicalURL: ''
   alternate:
@@ -48,9 +48,9 @@ sections:
 
         Die Lösung: nicht massiv bauen. Dünne Schichten über einen Kern legen.
 
-        Ich verwende blauen Bauschaumstoff als Armatur. Leicht, steif, einfach zu schnitzen. Der Pappmaché-Ton wird in dünnen Schichten aufgetragen - vielleicht einen halben Zentimeter auf einmal. Jede Schicht trocknet vollständig, bevor die nächste kommt.
+        Ich verwende blauen Bauschaumstoff als Armatur. Leicht, steif, einfach zu schnitzen. Der Pappmaché-Ton wird in dünnen Schichten aufgetragen - vielleicht einen halben Zentimeter dick. Jede Schicht trocknet vollständig, bevor die nächste kommt.
 
-        Der Ton selbst beginnt als Karton. In Stücke gerissen, über Nacht eingeweicht, zu Brei zerkleinert. Das Rezept: vier Teile Brei, zwei Teile Fugenspachtel, ein Teil Holzleim, ein Esslöffel Mineralöl. Mischen, bis es sich wie dicker Kitt anfühlt. Die Fugenspachtel gibt ihm Körper und Geschmeidigkeit, der Holzleim verleiht Festigkeit beim Trocknen, das Mineralöl hält es verarbeitbar.
+        Der Ton selbst beginnt als Karton. In Stücke gerissen, über Nacht eingeweicht, zu Brei zerkleinert. Das Rezept: vier Teile Brei, zwei Teile Fugenspachtel, ein Teil Holzleim, ein Esslöffel Mineralöl. Mischen, bis es sich wie ein dicker Brei anfühlt. Der Fugenspachtel gibt ihm Körper und Geschmeidigkeit, der Holzleim verleiht Festigkeit beim Trocknen, das Mineralöl macht es verarbeitbar.
 
         Eine Lektion gelernt: nicht jeder Karton ist gleich. Glänzend bedruckte Kartons haben oft dünne Plastikfolie auf die Oberfläche laminiert - sie lässt die Farben im Regal strahlen. Diese Folie zersetzt sich nicht. Nach dem Einweichen bleibt matschiger Karton übrig und schwimmende Plastikfetzen, die von Hand herausgelesen werden müssen. Einfacher brauner Wellkarton funktioniert am besten. Auf diese glänzende Oberfläche prüfen, bevor man ihn in den Eimer wirft.
 
@@ -91,7 +91,6 @@ sections:
         ![](/assets/images/studio-notes/the-side.jpg)
         ![](/assets/images/studio-notes/the-edges.jpg)
         ![](/assets/images/studio-notes/the-drying.jpg)
-
 
   - sectionType: collection-links
     collectionName: 'studio-notizen'
