@@ -5,14 +5,14 @@ hasHero: true
 
 card:
   title: 'Formen, die sich wiederholen'
-  description: 'Stadionformen und Kreise tauchen immer wieder in meiner Arbeit auf — Formen, die ich in einer industriellen deutschen Kindheit aufgenommen habe. Neue Arbeiten in Kartonmasse bringen diese Obsessionen in die dritte Dimension.'
+  description: 'Stadionformen und Kreise tauchen immer wieder in meinen Werken auf — Formen, die ich in meiner deutschen Kindheit verinnerlicht habe. Neue Arbeiten in Kartonmasse bringen diese zu Tage.'
   date: '2026-02-17'
   author: 'Werner Glinka'
   thumbnail: '/assets/images/studio-notes/stadium-shape.jpg'
 
 seo:
   title: 'Atelier-Notizen - Formen, die sich wiederholen'
-  description: 'Stadionformen und Kreise tauchen immer wieder in meiner Arbeit auf — Formen, die ich in einer industriellen deutschen Kindheit aufgenommen habe. Neue Arbeiten in Kartonmasse bringen diese Obsessionen in die dritte Dimension.'
+  description: 'Stadionformen und Kreise tauchen immer wieder in meinen Werken auf — Formen, die ich in meiner deutschen Kindheit verinnerlicht habe. Neue Arbeiten in Kartonmasse bringen diese zu Tage.'
   socialImage: '/assets/images/studio-notes/stadium-shape.jpg'
   canonicalURL: ''
   alternate:
