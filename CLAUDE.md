@@ -108,6 +108,22 @@ eleventyConfig.addPlugin(normalizedCollections, {
 });
 ```
 
+### Translating a Studio Note to German
+
+1. Read the English source file (e.g., `src/studio-notes/boat-form.md`)
+2. Create the German file in `src/de/studio-notizen/` with a German slug (e.g., `die-bootsform.md`)
+3. In the German file:
+   - Translate all user-facing text: `card.title`, `card.description`, `seo.title`, `seo.description`, section `leadIn`, `title`, and `prose`
+   - Use `leadIn: 'Atelier-Notizen'` (not "Studio Notes")
+   - Use `seo.title: 'Atelier-Notizen - ...'` prefix
+   - Set `alternate.en` to point to the English post's URL
+   - Set `collectionName: 'studio-notizen'` (not `studio-notes`)
+   - Keep proper nouns (place names, people) untranslated
+   - Keep image paths identical to the English version
+   - Keep all structural fields (`sectionType`, `containerFields`, `classes`, etc.) identical
+4. Update the English file's `seo.alternate.de` to point to the new German post's URL
+5. Preserve the date, author, and thumbnail from the English version
+
 ### Adding a Filter
 
 1. Create or edit filter file in `lib/filters/`
