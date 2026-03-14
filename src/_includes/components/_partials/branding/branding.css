@@ -24,11 +24,11 @@
       width: clamp(150px, -21.43px + 53.57vw, 300px);
       height: auto;
       transform: scale(1);
-      transition: transform 250ms ease;
+      transition: transform 400ms ease;
     }
   }
 
-  &:hover svg {
+  &:hover img {
     transform: scale(1.05);
   }
 }
