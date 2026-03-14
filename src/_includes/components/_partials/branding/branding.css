@@ -20,15 +20,11 @@
 
     /* could be a svg or an img */
 
-    svg {
-      width: var(--space-l-xl);
-      height: var(--space-l-xl);
+    img {
+      width: clamp(150px, -21.43px + 53.57vw, 300px);
+      height: auto;
       transform: scale(1);
       transition: transform 250ms ease;
-    }
-
-    img {
-      max-height: var(--space-l-xl);
     }
   }
 

@@ -26,10 +26,13 @@
   {% endif %}
 
   <header>
-      {% set link = site.branding.link %}
-      {% set img = site.branding.logo %}
+      {% set link = "/" %}
+      {% set img = {
+        src: "/assets/images/wg.svg",
+        alt: "Werner Glinka Logo"
+      }%}
 
-      {{ branding( link, img ) }}
+      {{ branding(link, img) }}
 
       {{ navigation( menu, currentUrl )}}
 
