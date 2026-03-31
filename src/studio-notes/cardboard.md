@@ -80,6 +80,37 @@ sections:
         ![](/assets/images/studio-notes/the-stack.jpg)
         ![](/assets/images/studio-notes/the-volume.jpg)
 
+  - sectionType: text-only
+    containerTag: aside
+    classes: 'related-artworks'
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: true
+      noMargin:
+        top: true
+        bottom: true
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: 'Works'
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
+        [Object 2026.003.01](/works/2026.003.01/) — Cardboard with paper mâché clay and paper tubes.
+
+        [Object 2026.003.02](/works/2026.003.02/) — Laminated cardboard strips with paper mâché clay spine.
+
+        [Object 2026.003.03](/works/2026.003.03/) — Laminated cardboard panels with driftwood.
+
   - sectionType: collection-links
     collectionName: 'studio-notes'
     containerTag: section
@@ -92,7 +123,7 @@ sections:
       isAnimated: true
       noMargin:
         top: true
-        bottom: false
+        bottom: true
       noPadding:
         top: false
         bottom: false

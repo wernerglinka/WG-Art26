@@ -156,6 +156,33 @@ sections:
       prose: |-
         Manchmal kommt das letzte Element als Geschenk.
 
+  - sectionType: text-only
+    containerTag: aside
+    classes: 'related-artworks'
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: true
+      noMargin:
+        top: true
+        bottom: true
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: 'Werke'
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
+        [Objekt 2026.003.01](/de/werke/2026.003.01/) — Das in dieser Notiz fertiggestellte Stück.
+
   - sectionType: collection-links
     collectionName: 'studio-notizen'
     containerTag: section

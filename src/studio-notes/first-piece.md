@@ -81,6 +81,33 @@ sections:
       prose: |-
         ![](/assets/images/studio-notes/the-first-piece.jpg)
 
+  - sectionType: text-only
+    containerTag: aside
+    classes: 'related-artworks'
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: true
+      noMargin:
+        top: true
+        bottom: true
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: 'Works'
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
+        [Object 2026.003.02](/works/2026.003.02/) — The first cardboard and paper mâché assembly.
+
   - sectionType: collection-links
     collectionName: 'studio-notes'
     containerTag: section
@@ -93,7 +120,7 @@ sections:
       isAnimated: true
       noMargin:
         top: true
-        bottom: false
+        bottom: true
       noPadding:
         top: false
         bottom: false

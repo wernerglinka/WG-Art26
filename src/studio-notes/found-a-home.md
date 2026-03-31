@@ -156,6 +156,33 @@ sections:
       prose: |-
         Sometimes the last element arrives as a gift.
 
+  - sectionType: text-only
+    containerTag: aside
+    classes: 'related-artworks'
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: true
+      noMargin:
+        top: true
+        bottom: true
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: 'Works'
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
+        [Object 2026.003.01](/works/2026.003.01/) — The piece completed in this note.
+
   - sectionType: collection-links
     collectionName: 'studio-notes'
     containerTag: section

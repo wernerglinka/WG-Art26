@@ -114,6 +114,35 @@ sections:
 
         Mal sehen, was ich in Minnesota finde.
 
+  - sectionType: text-only
+    containerTag: aside
+    classes: 'related-artworks'
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: true
+      noMargin:
+        top: true
+        bottom: true
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: 'Werke'
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
+        [Boote](/de/werke/boats/) — Das in dieser Notiz besprochene Triptychon.
+
+        [Objekt 2005.01.006](/de/werke/2005.01.006/) — Ein verwandter Bootsrumpf aus Kiefernstöcken und Draht.
+
   - sectionType: collection-links
     collectionName: 'studio-notizen'
     containerTag: section

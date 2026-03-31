@@ -82,6 +82,35 @@ sections:
         ![](/assets/images/studio-notes/stadium-shape-with-clamps.jpg)
         ![](/assets/images/studio-notes/stadium-shape.jpg)
 
+  - sectionType: text-only
+    containerTag: aside
+    classes: 'related-artworks'
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: true
+      noMargin:
+        top: true
+        bottom: true
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: 'Works'
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
+        [Object 2007.01.001](/works/2007.01.001/) — A circular, wreath-like form from interlocking metal strips.
+
+        [Object 2003.12.001](/works/2003.12.001/) — German flag colors from a Ruhr Valley childhood.
+
   - sectionType: collection-links
     collectionName: 'studio-notes'
     containerTag: section

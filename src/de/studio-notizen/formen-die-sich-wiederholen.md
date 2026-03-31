@@ -82,6 +82,35 @@ sections:
         ![](/assets/images/studio-notes/stadium-shape-with-clamps.jpg)
         ![](/assets/images/studio-notes/stadium-shape.jpg)
 
+  - sectionType: text-only
+    containerTag: aside
+    classes: 'related-artworks'
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: true
+      noMargin:
+        top: true
+        bottom: true
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: 'Werke'
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
+        [Objekt 2007.01.001](/de/werke/2007.01.001/) — Eine kreisförmige, kranzartige Form aus ineinandergreifenden Metallstreifen.
+
+        [Objekt 2003.12.001](/de/werke/2003.12.001/) — Deutschlandfarben aus einer Ruhrpott-Kindheit.
+
   - sectionType: collection-links
     collectionName: 'studio-notizen'
     containerTag: section

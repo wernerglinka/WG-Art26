@@ -80,6 +80,37 @@ sections:
         ![](/assets/images/studio-notes/the-stack.jpg)
         ![](/assets/images/studio-notes/the-volume.jpg)
 
+  - sectionType: text-only
+    containerTag: aside
+    classes: 'related-artworks'
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: true
+      noMargin:
+        top: true
+        bottom: true
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: 'Werke'
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
+        [Objekt 2026.003.01](/de/werke/2026.003.01/) — Karton mit Pappmaché-Ton und Papierröhrchen.
+
+        [Objekt 2026.003.02](/de/werke/2026.003.02/) — Laminierte Kartonstreifen mit Pappmaché-Rücken.
+
+        [Objekt 2026.003.03](/de/werke/2026.003.03/) — Laminierte Kartonpaneele mit Treibholz.
+
   - sectionType: collection-links
     collectionName: 'studio-notizen'
     containerTag: section

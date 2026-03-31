@@ -114,6 +114,35 @@ sections:
 
         We'll see what Minnesota gives me.
 
+  - sectionType: text-only
+    containerTag: aside
+    classes: 'related-artworks'
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: true
+      noMargin:
+        top: true
+        bottom: true
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: 'Works'
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
+        [Boats](/works/boats/) — The triptych discussed in this note.
+
+        [Object 2005.01.006](/works/2005.01.006/) — A related boat hull in pine sticks and wire.
+
   - sectionType: collection-links
     collectionName: 'studio-notes'
     containerTag: section
