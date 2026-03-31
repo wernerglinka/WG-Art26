@@ -140,4 +140,31 @@ sections:
       subTitle: ''
       prose: |-
         Die erste Tafel ist jetzt Teil der ständigen Sammlung des Peninsula Museum of Art in San Mateo.
+
+  - sectionType: text-only
+    containerTag: aside
+    classes: 'related-studio-notes'
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: true
+      noMargin:
+        top: true
+        bottom: false
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: 'Atelier-Notizen'
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
+        [Die Bootsform](/de/studio-notizen/die-bootsform/) — Über die Schiffsformen, die dieses Triptychon geprägt haben.
 ---

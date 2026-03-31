@@ -125,7 +125,7 @@ sections:
       isAnimated: true
       noMargin:
         top: true
-        bottom: false
+        bottom: true
       noPadding:
         top: false
         bottom: false
@@ -140,4 +140,31 @@ sections:
       subTitle: ''
       prose: |-
         The first panel is now part of the permanent collection at the Peninsula Museum of Art in San Mateo.
+
+  - sectionType: text-only
+    containerTag: aside
+    classes: 'related-studio-notes'
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: true
+      noMargin:
+        top: true
+        bottom: false
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: 'Studio Notes'
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
+        [The Boat Form](/studio-notes/boat-form/) — On the vessel forms that shaped this triptych.
 ---
