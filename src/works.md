@@ -24,13 +24,12 @@ seo:
     de: /de/werke/
 
 sections:
-  - sectionType: image-grid
+  - sectionType: multi-tab
     containerTag: section
     classes: ''
     id: ''
     isDisabled: false
     isAnimated: true
-    dataSource: 'works'
     containerFields:
       inContainer: true
       noMargin:
@@ -43,13 +42,25 @@ sections:
         color: ''
         image: ''
         imageScreen: 'none'
-    artworks:
-      source: 'works'
-      imageFolder: artworks/thumbnails
     text:
       title: 'Works'
       titleTag: 'h1'
-    settings:
-      gap: '50'
-      targetRowHeight: '300'
+    defaultTab: ''
+    tabs:
+      - key: '2026'
+        label: '2026'
+        pane:
+          sectionType: image-grid
+          dataSource: 'works/2026'
+          settings:
+            gap: '50'
+            targetRowHeight: '300'
+      - key: legacy
+        label: 'Legacy'
+        pane:
+          sectionType: image-grid
+          dataSource: 'works/legacy'
+          settings:
+            gap: '50'
+            targetRowHeight: '300'
 ---

@@ -1,0 +1,126 @@
+{% from "components/_partials/text/text.njk" import text %}
+
+{#
+  Tabs Section
+
+  A generic tabs wrapper that dynamically generates tabs from a data source directory.
+  Each key in the data object becomes a tab, with its array rendered as an image grid.
+
+  Tabs are sorted: numeric keys (years) descending, non-numeric keys (e.g., "legacy") last.
+  Tab labels default to the key name. Override specific labels via the `labels` map.
+
+  Frontmatter structure:
+    sectionType: tabs
+    dataSource: 'works'        # data directory name — data.works becomes the source
+    defaultTab: '2026'         # which tab is active (omit for current year, or first tab)
+    labels:                    # optional label overrides for non-obvious keys
+      legacy: 'Legacy'
+    settings:
+      gap: '50'
+      targetRowHeight: '300'
+#}
+
+{% set tabsSection = section %}
+{% set sourceData = data[tabsSection.dataSource] %}
+{% set tabKeys = sourceData | sortedKeys %}
+{% set currentYearStr = "" | currentYear | string %}
+{% if tabsSection.defaultTab and sourceData[tabsSection.defaultTab] %}
+  {% set defaultTab = tabsSection.defaultTab %}
+{% elif sourceData[currentYearStr] %}
+  {% set defaultTab = currentYearStr %}
+{% else %}
+  {% set defaultTab = tabKeys[0] %}
+{% endif %}
+{% set labels = tabsSection.labels or {} %}
+{% set gap = tabsSection.settings.gap if tabsSection.settings and tabsSection.settings.gap else "6" %}
+{% set targetRowHeight = tabsSection.settings.targetRowHeight if tabsSection.settings and tabsSection.settings.targetRowHeight else "200" %}
+
+<div class="container content">
+  {# Render optional title/text block #}
+  {% if tabsSection.text | hasText %}
+    <div class="text flow {% if tabsSection.hasCenteredContent %}is-centered{% endif %}">
+      {{ text(tabsSection.text) }}
+    </div>
+  {% endif %}
+
+  {% if tabKeys and tabKeys | length > 0 %}
+    <div class="tabs-component" data-default-tab="{{ defaultTab }}">
+      {# Tab buttons — generated from data keys #}
+      <div class="tabs-nav" role="tablist" aria-label="{{ tabsSection.text.title or 'Tabs' }}">
+        {% for key in tabKeys %}
+          <button
+            class="tabs-button"
+            role="tab"
+            id="tab-{{ key }}"
+            aria-controls="panel-{{ key }}"
+            aria-selected="{{ 'true' if key == defaultTab else 'false' }}"
+            tabindex="{{ '0' if key == defaultTab else '-1' }}"
+          >
+            {{ labels[key] if labels[key] else key }}
+          </button>
+        {% endfor %}
+      </div>
+
+      {# Tab panels — each renders an image grid from the key's data array #}
+      {% for key in tabKeys %}
+        {% set imageList = sourceData[key] %}
+        <div
+          class="tabs-panel"
+          role="tabpanel"
+          id="panel-{{ key }}"
+          aria-labelledby="tab-{{ key }}"
+          {% if key != defaultTab %}hidden{% endif %}
+        >
+          {% if imageList and imageList | length > 0 %}
+            <div
+              class="image-grid js-image-grid"
+              data-gap="{{ gap }}"
+              data-target-row-height="{{ targetRowHeight }}"
+            >
+              {% for item in imageList %}
+                <div class="image-grid-item{% if item.link %} has-link{% endif %}">
+                  {% if item.link %}
+                    <a href="{{ item.link }}" class="image-grid-link" aria-label="{{ item.title }}">
+                  {% endif %}
+
+                  <figure class="image-grid-figure">
+                    <img
+                      src="{{ item.image }}"
+                      alt="{{ item.title }}"
+                      loading="lazy"
+                      data-no-responsive
+                    >
+                    <figcaption class="image-grid-overlay">
+                      <div class="image-grid-details">
+                        {% if item.title %}
+                          <span class="image-grid-title">{{ item.title }}</span>
+                        {% endif %}
+                        {% if item.details %}
+                          <span class="image-grid-info">{{ item.details }}</span>
+                        {% endif %}
+                        {% if item.date %}
+                          <span class="image-grid-date">{{ item.date }}</span>
+                        {% endif %}
+                      </div>
+                      {% if item.link %}
+                        <div class="image-grid-icon" aria-hidden="true">
+                          {% include "icons/arrow-left.njk" %}
+                        </div>
+                      {% endif %}
+                    </figcaption>
+                  </figure>
+
+                  {% if item.link %}
+                    </a>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          {% else %}
+            <p class="image-grid-empty">No images found for "{{ labels[key] if labels[key] else key }}".</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

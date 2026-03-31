@@ -19,7 +19,7 @@ seo:
 sections:
   - sectionType: text-only
     containerTag: article
-    classes: ''
+    classes: 'art-title'
     id: ''
     isDisabled: false
     isReverse: false

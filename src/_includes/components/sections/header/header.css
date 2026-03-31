@@ -124,11 +124,21 @@ header {
 
   /* Cluster pattern: horizontal layout with flexible wrapping */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-s);
   padding-inline: var(--gutter);
+
+  nav {
+    margin-left: auto;
+  }
+
+  /* Tight spacing for very small screens (320px legacy phones) */
+  @container header (max-width: 22rem) {
+    gap: var(--space-2xs);
+    padding-inline: var(--space-xs);
+  }
 
   /* Reset all button styles in header (including hamburger) */
   button.hamburger-menu {

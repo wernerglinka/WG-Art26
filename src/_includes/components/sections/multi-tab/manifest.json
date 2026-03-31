@@ -1,0 +1,5 @@
+{
+  "name": "multi-tab",
+  "styles": ["multi-tab.css"],
+  "scripts": ["multi-tab.js"]
+}

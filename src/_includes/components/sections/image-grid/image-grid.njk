@@ -11,7 +11,7 @@
   Items with a link property show an arrow icon and are clickable.
 #}
 
-{% set imageList = data[section.dataSource] %}
+{% set imageList = data | getNestedData(section.dataSource) %}
 {% set gap = section.settings.gap if section.settings and section.settings.gap else "6" %}
 {% set targetRowHeight = section.settings.targetRowHeight if section.settings and section.settings.targetRowHeight else "200" %}
 

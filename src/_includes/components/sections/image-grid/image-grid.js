@@ -282,6 +282,15 @@ function cleanupImageGrids() {
   });
 }
 
+// Expose for use by other components (e.g., tabs) that need to trigger grid init
+window.initImageGrids = initImageGrids;
+
+// Listen for tab panel reveal dispatched by multi-tab component.
+// Calls initImageGrids() to lay out any grids that were hidden at init time.
+document.addEventListener('tab:revealed', () => {
+  initImageGrids();
+});
+
 // Register with page transitions for SWUP support
 if (window.PageTransitions) {
   window.PageTransitions.registerComponent('image-grid', initImageGrids);

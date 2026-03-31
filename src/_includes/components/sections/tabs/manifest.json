@@ -1,0 +1,6 @@
+{
+  "name": "tabs",
+  "styles": ["tabs.css"],
+  "scripts": ["tabs.js"],
+  "requires": ["image-grid"]
+}

@@ -21,7 +21,7 @@
     /* could be a svg or an img */
 
     img {
-      width: clamp(150px, -21.43px + 53.57vw, 300px);
+      width: clamp(150px, -21.43px + 26.79vw, 250px);
       height: auto;
       transform: scale(1);
       transition: transform 400ms ease;

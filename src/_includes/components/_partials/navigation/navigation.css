@@ -98,6 +98,7 @@
   .hamburger-menu {
     display: block;
     margin-left: auto;
+    margin-right: var(--space-s);
   }
 
   .main-menu {
@@ -165,6 +166,13 @@
     a.active-path {
       color: var(--color-link-in-path) !important;
     }
+  }
+}
+
+/* Remove hamburger right margin on very small screens (320px legacy phones) */
+@container header (max-width: 22rem) {
+  .hamburger-menu {
+    margin-right: 0;
   }
 }
 
