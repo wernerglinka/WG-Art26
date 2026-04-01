@@ -16,7 +16,7 @@
  * - --color-background-light
  */
 
-.artist-slider .section-wrapper {
+.artist-slider.section-wrapper {
   padding: 0;
   margin: 0;
   container-type: inline-size;
@@ -84,12 +84,7 @@
   transition:
     opacity 0.4s ease-in-out,
     visibility 0.4s ease-in-out;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.6) 100%);
 
   &.is-visible {
     opacity: 1;
@@ -105,7 +100,7 @@
   border-radius: var(--space-xs-s);
   box-shadow: var(--glass-box-shadow);
   border: var(--glass-border);
-  color: var(--color-text);
+  color: var(--color-text-light);
 }
 
 .artist-slider-wrapper .info-title {
@@ -238,7 +233,9 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  transition: background 0.5s ease-in-out, transform 0.2s ease;
+  transition:
+    background 0.5s ease-in-out,
+    transform 0.2s ease;
 
   &:hover {
     background: rgba(255, 255, 255, 0.5);

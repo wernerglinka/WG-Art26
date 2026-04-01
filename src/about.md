@@ -10,7 +10,7 @@ navigation:
 
 seo:
   title: 'About My Work - Werner Glinka'
-  description: 'About the mixed media assemblages of Werner Glinka - inspiration, process, and artistic vision.'
+  description: 'About the assemblages of Werner Glinka - inspiration, process, and artistic vision.'
   socialImage: '/assets/images/sample.jpg'
   canonicalURL: ''
   alternate:

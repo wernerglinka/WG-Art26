@@ -17,7 +17,7 @@ navigation:
 
 seo:
   title: 'Werner Glinka - Mixed Media Künstler'
-  description: 'Mixed Media Assemblagen von Werner Glinka aus gefundenen und weggeworfenen Materialien.'
+  description: 'Assemblagen von Werner Glinka aus gefundenen und weggeworfenen Materialien.'
   socialImage: '/assets/images/artworks/2004.04.003.jpg'
   canonicalURL: ''
   alternate:

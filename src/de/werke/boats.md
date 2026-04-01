@@ -7,19 +7,19 @@ navigation:
   navIndex: 1
 
 seo:
-  title: 'Mixed Media Assemblage Triptychon mit Küstenthemen'
-  description: 'Mixed Media Assemblage, die an Bootskadaver im Princeton Harbor, Kalifornien erinnert.'
+  title: 'Assemblage Triptychon mit Küstenthemen'
+  description: 'Assemblage, die an Bootskadaver im Princeton Harbor, Kalifornien erinnert.'
   socialImage: '/assets/images/artworks/boats.triptych.jpg'
   canonicalURL: ''
   schemaType: VisualArtwork
-  artMedium: 'Mixed Media Assemblage'
+  artMedium: 'Assemblage'
   alternate:
     en: /works/boats/
 
 sections:
-  - sectionType: text-only
+  - sectionType: artwork
     containerTag: article
-    classes: 'art-title'
+    classes: ''
     id: ''
     isDisabled: false
     isReverse: false
@@ -35,15 +35,51 @@ sections:
       background:
         color: ''
         image: ''
-        imageScreen: 'none'
+        imageScreen: 'none' # light, dark, none
     text:
       leadIn: ''
       title: 'Boote'
       titleTag: 'h1'
       subTitle: ''
-      prose: |-
-        ![](/assets/images/artworks/boats.triptych.jpg)
+    image:
+      src: '/assets/images/artworks/boats.triptych.jpg'
+      alt: ''
+    artworkProperties:
+      type: 'Assemblage'
+      year: ''
+      materials: ''
+      status: ''
+      dimensions:
+        width: ''
+        height: ''
+        depth: ''
+        unit: 'in'
 
+  - sectionType: text-only
+    containerTag: section
+    classes: ''
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: false
+      noMargin:
+        top: true
+        bottom: false
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: ''
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
         Princeton Harbor liegt an der San Mateo Küste, ein Arbeitshafen, wo Fischerboote kommen und gehen. Ich habe Jahre damit verbracht, diese Docks entlangzugehen - an Booten vorbei, die repariert werden, Booten, die auf Teile warten, Booten, die nie wieder Wasser sehen würden. Die Rümpfe verlassener Schiffe faszinierten mich. Von der Beplankung befreit, ihre Rippen freigelegt, wurden sie zu etwas anderem als Booten. Sie waren Kadaver, Skelette, die Erinnerung an eine Form.
 
         Dieses Triptychon erkundet diese Transformation. Jede Tafel hält die gleiche spitze Rumpfform - die wesentliche Silhouette, die "Gefäß" sagt - aber aus verschiedenen Materialien konstruiert, die verschiedene Stadien oder Seinszustände suggerieren.

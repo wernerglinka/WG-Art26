@@ -1,22 +1,40 @@
 /**
  * Multi-Tab Component
  *
- * Handles tab switching with proper ARIA attributes and keyboard navigation.
- * When a panel is revealed, dispatches a 'tab:revealed' CustomEvent on the panel
- * element so that any component inside (image-grid, media, etc.) can reinitialize
- * itself. Components subscribe to this event independently — multi-tab has no
- * knowledge of which component types are in its panes.
+ * Handles tab switching with proper ARIA attributes, keyboard navigation,
+ * and URL hash-based history so browser back/forward works correctly.
+ *
+ * Tab selection is reflected in the URL as #tab-{key}. Clicking a tab or
+ * navigating with arrow keys pushes a history entry; the popstate handler
+ * restores the correct tab when the user navigates back or forward.
  *
  * @module multi-tab
  */
+
+const TAB_HASH_PREFIX = 'tab-';
+
+/**
+ * Returns the tab key encoded in the current URL hash, or null if the hash
+ * is absent or does not match any tab button in the given container.
+ *
+ * @param {HTMLElement} container - The .tabs-component element
+ * @returns {string|null}
+ */
+function tabKeyFromHash(container) {
+  const hash = window.location.hash.slice(1); // strip leading #
+  if (!hash.startsWith(TAB_HASH_PREFIX)) { return null; }
+  const key = hash.slice(TAB_HASH_PREFIX.length);
+  return container.querySelector(`#tab-${key}`) ? key : null;
+}
 
 /**
  * Activates a tab and shows its panel.
  *
  * @param {HTMLElement} container - The .tabs-component element
  * @param {HTMLElement} tab - The tab button to activate
+ * @param {boolean} [focus=true] - Whether to move focus to the tab button
  */
-function activateTab(container, tab) {
+function activateTab(container, tab, focus = true) {
   const tabs = container.querySelectorAll('.tabs-button');
   const panelId = tab.getAttribute('aria-controls');
   const panel = container.querySelector(`#${panelId}`);
@@ -35,7 +53,7 @@ function activateTab(container, tab) {
   // Activate selected tab
   tab.setAttribute('aria-selected', 'true');
   tab.setAttribute('tabindex', '0');
-  tab.focus();
+  if (focus) { tab.focus(); }
 
   // Show selected panel
   panel.removeAttribute('hidden');
@@ -43,6 +61,19 @@ function activateTab(container, tab) {
   // Notify components inside this panel that they are now visible.
   // Each component that needs reinitialization listens for this event.
   panel.dispatchEvent(new CustomEvent('tab:revealed', { bubbles: true }));
+}
+
+/**
+ * Handles browser back/forward navigation by reading the URL hash and
+ * activating the matching tab. Does not move keyboard focus.
+ */
+function handlePopState() {
+  document.querySelectorAll('.tabs-component[data-initialized]').forEach((container) => {
+    const hashKey = tabKeyFromHash(container);
+    const key = hashKey || container.dataset.defaultTab;
+    const tab = container.querySelector(`#tab-${key}`) || container.querySelector('.tabs-button');
+    if (tab) { activateTab(container, tab, false); }
+  });
 }
 
 /**
@@ -57,10 +88,21 @@ function initMultiTabs() {
 
     const tabs = container.querySelectorAll('.tabs-button');
 
-    // Click handler
+    // URL hash takes priority over data-default-tab
+    const hashKey = tabKeyFromHash(container);
+    const initialKey = hashKey || container.dataset.defaultTab;
+    const initialTab = container.querySelector(`#tab-${initialKey}`) || tabs[0];
+
+    // Activate initial tab without stealing keyboard focus.
+    // Do not touch the URL — if there was no hash on arrival the URL stays clean.
+    activateTab(container, initialTab, false);
+
+    // Click handler: activate tab and push a history entry
     tabs.forEach((tab) => {
       tab.addEventListener('click', () => {
+        const key = tab.id.replace(/^tab-/, '');
         activateTab(container, tab);
+        history.pushState(null, '', `#${TAB_HASH_PREFIX}${key}`);
       });
     });
 
@@ -83,7 +125,9 @@ function initMultiTabs() {
       }
 
       event.preventDefault();
-      activateTab(container, tabArray[newIndex]);
+      const newTab = tabArray[newIndex];
+      activateTab(container, newTab);
+      history.pushState(null, '', `#${TAB_HASH_PREFIX}${newTab.id.replace(/^tab-/, '')}`);
     });
   });
 }
@@ -92,11 +136,14 @@ function initMultiTabs() {
  * Cleanup multi-tab components.
  */
 function cleanupMultiTabs() {
-  const containers = document.querySelectorAll('.tabs-component[data-initialized]');
-  containers.forEach((container) => {
+  document.querySelectorAll('.tabs-component[data-initialized]').forEach((container) => {
     delete container.dataset.initialized;
   });
 }
+
+// popstate listener is registered once at module level so it survives
+// SWUP page transitions (which call cleanup/init but not re-register popstate).
+window.addEventListener('popstate', handlePopState);
 
 // Register with page transitions for SWUP support
 if (window.PageTransitions) {

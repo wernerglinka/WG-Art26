@@ -1,0 +1,68 @@
+{% from "components/_partials/text/text.njk" import text %}
+{% from "components/_partials/image/image.njk" import image %}
+
+{% set isDE = lang == 'de' %}
+
+<div class="content container">
+  {% if section.image %}
+    {% if section.text %}
+      <div class="artwork-header flow">
+        {{ text(section.text)}}
+      </div>
+    {% endif %}
+
+    <div class="media">
+      {{ image(section.image) }}
+    </div>
+
+    {% if section.artworkProperties %}
+      {% set props = section.artworkProperties %}
+      <dl class="props-list">
+
+        {% if props.type %}
+          <div class="row">
+            <dt>{{ 'Typ' if isDE else 'Type' }}</dt>
+            <dd>{{ props.type }}</dd>
+          </div>
+        {% endif %}
+
+        {% if props.year %}
+          <div class="row">
+            <dt>{{ 'Jahr' if isDE else 'Year' }}</dt>
+            <dd>{{ props.year }}</dd>
+          </div>
+        {% endif %}
+
+        {% if props.materials %}
+          <div class="row">
+            <dt>{{ 'Materialien' if isDE else 'Materials' }}</dt>
+            <dd>{{ props.materials }}</dd>
+          </div>
+        {% endif %}
+
+        {% if props.dimensions %}
+          {% set dims = props.dimensions %}
+          {% set unit = dims.unit | default('cm') %}
+          <div class="row">
+            <dt>{{ 'Maße' if isDE else 'Dimensions' }}</dt>
+            <dd>
+              {{- dims.width -}}w
+              {%- if dims.height %} &times; {{ dims.height }}h {% endif -%}
+              {%- if dims.depth %} &times; {{ dims.depth }}d {% endif -%}
+              &nbsp;{{ unit }}
+            </dd>
+          </div>
+        {% endif %}
+
+        {% if props.status and props.status | lower == 'available' %}
+          <div class="row">
+            <dt>Status</dt>
+            <dd class="status status--available">{{ 'Verfügbar' if isDE else 'Available' }}</dd>
+          </div>
+        {% endif %}
+
+      </dl>
+    {% endif %}
+
+  {% endif %}
+</div>

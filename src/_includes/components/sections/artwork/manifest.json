@@ -1,0 +1,61 @@
+{
+  "name": "artwork",
+  "type": "section",
+  "styles": [
+    "artwork.css"
+  ],
+  "scripts": [],
+  "requires": [
+    "text",
+    "image",
+    "commons"
+  ],
+  "validation": {
+    "required": [
+      "sectionType",
+      "image"
+    ],
+    "properties": {
+      "sectionType": {
+        "type": "string",
+        "const": "artwork"
+      },
+      "containerFields.inContainer": {
+        "type": "boolean"
+      },
+      "containerFields.isAnimated": {
+        "type": "boolean"
+      },
+      "text.title": {
+        "type": "string"
+      },
+      "text.prose": {
+        "type": "string"
+      },
+      "image.src": {
+        "type": "string"
+      },
+      "image.alt": {
+        "type": "string"
+      },
+      "image.caption": {
+        "type": "string"
+      },
+      "artworkProperties.type": {
+        "type": "string"
+      },
+      "artworkProperties.year": {
+        "type": "string"
+      },
+      "artworkProperties.materials": {
+        "type": "string"
+      },
+      "artworkProperties.dimensions": {
+        "type": "object"
+      },
+      "artworkProperties.status": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -89,6 +89,10 @@ export default function (eleventyConfig) {
     NODE_ENV: process.env.NODE_ENV || 'development'
   });
 
+  // Ignore output directory and node_modules from watch
+  eleventyConfig.watchIgnores.add('_site/**');
+  eleventyConfig.watchIgnores.add('node_modules/**');
+
   // Configure server options
   eleventyConfig.setServerOptions({
     port: 3000

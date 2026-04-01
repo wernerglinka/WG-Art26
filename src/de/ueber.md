@@ -10,7 +10,7 @@ navigation:
 
 seo:
   title: Über meine Arbeit
-  description: 'Über die Mixed Media Assemblagen von Werner Glinka - Inspiration, Prozess und künstlerische Vision.'
+  description: 'Über die Assemblagen von Werner Glinka - Inspiration, Prozess und künstlerische Vision.'
   socialImage: '/assets/images/sample.jpg'
   canonicalURL: ''
   alternate:

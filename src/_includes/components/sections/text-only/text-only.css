@@ -85,19 +85,6 @@
     }
   }
 
-  &.art-title {
-    .content {
-      border-top: 1px solid var(--color-border-light);
-      margin-top: var(--space-l);
-    }
-
-    h1 {
-      margin-top: var(--space-l);
-      font-size: var(--font-p);
-      font-weight: bold;
-    }
-  }
-
   &.related-studio-notes {
     .content {
       border-top: 1px solid var(--color-border-light);
