@@ -42,14 +42,24 @@
 
         {% if props.dimensions %}
           {% set dims = props.dimensions %}
-          {% set unit = dims.unit | default('cm') %}
+          {% if isDE %}
+            {% set _w = dims.width * 2.54 %}
+            {% set _h = dims.height * 2.54 %}
+            {% set _d = dims.depth * 2.54 %}
+            {% set displayUnit = 'cm' %}
+          {% else %}
+            {% set _w = dims.width %}
+            {% set _h = dims.height %}
+            {% set _d = dims.depth %}
+            {% set displayUnit = dims.unit | default('in') %}
+          {% endif %}
           <div class="row">
             <dt>{{ 'Maße' if isDE else 'Dimensions' }}</dt>
             <dd>
-              {{- dims.width -}}w
-              {%- if dims.height %} &times; {{ dims.height }}h {% endif -%}
-              {%- if dims.depth %} &times; {{ dims.depth }}d {% endif -%}
-              &nbsp;{{ unit }}
+              {{- _w | round -}}w
+              {%- if _h %} &times; {{ _h | round }}h {% endif -%}
+              {%- if _d %} &times; {{ _d | round }}d {% endif -%}
+              &nbsp;{{ displayUnit }}
             </dd>
           </div>
         {% endif %}

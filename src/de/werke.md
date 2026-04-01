@@ -51,7 +51,7 @@ sections:
         label: '2026'
         pane:
           sectionType: image-grid
-          dataSource: 'works/2026'
+          dataSource: 'werke/2026'
           settings:
             gap: '50'
             targetRowHeight: '300'
@@ -59,7 +59,7 @@ sections:
         label: 'Legacy'
         pane:
           sectionType: image-grid
-          dataSource: 'works/legacy'
+          dataSource: 'werke/legacy'
           settings:
             gap: '50'
             targetRowHeight: '300'
