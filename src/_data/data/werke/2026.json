@@ -1,23 +1,37 @@
 [
   {
-    "image": "/assets/images/artworks/thumbnails/2026/2026.003.01.jpg",
-    "title": "Objekt 2026.003.01",
+    "image": "/assets/images/artworks/thumbnails/2026/2026.03.001.jpg",
+    "title": "Objekt 2026.03.001",
     "details": "Wandskulptur, Pappmaché-Ton auf Karton mit Papierröhrchen und Fliesenkreuzen",
     "date": "2026",
-    "link": "/de/werke/2026.003.01"
+    "link": "/de/werke/2026.03.001"
   },
   {
-    "image": "/assets/images/artworks/thumbnails/2026/2026.003.02.jpg",
-    "title": "Objekt 2026.003.02",
+    "image": "/assets/images/artworks/thumbnails/2026/2026.03.002.jpg",
+    "title": "Objekt 2026.03.002",
     "details": "Wandskulptur, laminierte Kartonstreifen mit Pappmaché-Ton-Rücken und Ösen",
     "date": "2026",
-    "link": "/de/werke/2026.003.02"
+    "link": "/de/werke/2026.03.002"
   },
   {
-    "image": "/assets/images/artworks/thumbnails/2026/2026.003.03.jpg",
-    "title": "Objekt 2026.003.03",
+    "image": "/assets/images/artworks/thumbnails/2026/2026.03.003.jpg",
+    "title": "Objekt 2026.03.003",
     "details": "Wandskulptur, laminierte Kartonplatten mit Treibholz",
     "date": "2026",
-    "link": "/de/werke/2026.003.03"
+    "link": "/de/werke/2026.03.003"
+  },
+  {
+    "image": "/assets/images/artworks/thumbnails/2026/2026.03.004.JPG",
+    "title": "Objekt 2026.03.004",
+    "details": "9 x 24 x 1 Zoll, Assemblage, Schredderstreifen mit Holzleim und Lack",
+    "date": "2026",
+    "link": "/de/werke/2026.03.004"
+  },
+  {
+    "image": "/assets/images/artworks/thumbnails/2026/2026.03.005.JPG",
+    "title": "Objekt 2026.03.005",
+    "details": "9 x 24 x 1 Zoll, Assemblage, Drahtgeflecht mit Asche, Urethan und Schredderstreifen",
+    "date": "2026",
+    "link": "/de/werke/2026.03.005"
   }
 ]

@@ -181,7 +181,7 @@ sections:
       titleTag: 'h2'
       subTitle: ''
       prose: |-
-        [Object 2026.003.01](/works/2026.003.01/) — The piece completed in this note.
+        [Object 2026.03.001](/works/2026.03.001/) — The piece completed in this note.
 
   - sectionType: collection-links
     collectionName: 'studio-notes'

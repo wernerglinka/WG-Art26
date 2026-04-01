@@ -30,11 +30,11 @@ Each JSON file contains an array of image grid items:
 ```json
 [
   {
-    "image": "/assets/images/artworks/2026/2026.003.01.jpg",
-    "title": "Object 2026.003.01",
+    "image": "/assets/images/artworks/2026/2026.03.001.jpg",
+    "title": "Object 2026.03.001",
     "details": "Wall sculpture, paper mâché clay on cardboard",
     "date": "2026",
-    "link": "/works/2026.003.01"
+    "link": "/works/2026.03.001"
   }
 ]
 ```

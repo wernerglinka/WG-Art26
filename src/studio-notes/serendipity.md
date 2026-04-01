@@ -108,6 +108,35 @@ sections:
 
         Minneapolis doesn't give me storm-fallen redwood sticks or rusty fence wire. It gives me shredder output. You work with what you find.
 
+  - sectionType: text-only
+    containerTag: aside
+    classes: 'related-artworks'
+    id: ''
+    isDisabled: false
+    isReverse: false
+    containerFields:
+      inContainer: false
+      isAnimated: true
+      noMargin:
+        top: true
+        bottom: true
+      noPadding:
+        top: false
+        bottom: false
+      background:
+        color: ''
+        image: ''
+        imageScreen: 'none'
+    text:
+      leadIn: 'Works'
+      title: ''
+      titleTag: 'h2'
+      subTitle: ''
+      prose: |-
+        [Object 2026.03.004](/works/2026.03.004/) — Shredded paper with wood glue and lacquer; the first piece from this material.
+
+        [Object 2026.03.005](/works/2026.03.005/) — Wire mesh with ash, urethane, and shredded paper.
+
   - sectionType: collection-links
     collectionName: 'studio-notes'
     containerTag: section

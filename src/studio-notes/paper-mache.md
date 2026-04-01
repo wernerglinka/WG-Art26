@@ -117,9 +117,9 @@ sections:
       titleTag: 'h2'
       subTitle: ''
       prose: |-
-        [Object 2026.003.01](/works/2026.003.01/) — Paper mâché clay over cardboard with paper tubes.
+        [Object 2026.03.001](/works/2026.03.001/) — Paper mâché clay over cardboard with paper tubes.
 
-        [Object 2026.003.02](/works/2026.003.02/) — Laminated cardboard with paper mâché clay spine.
+        [Object 2026.03.002](/works/2026.03.002/) — Laminated cardboard with paper mâché clay spine.
 
   - sectionType: collection-links
     collectionName: 'studio-notes'

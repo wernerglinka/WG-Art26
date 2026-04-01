@@ -105,11 +105,11 @@ sections:
       titleTag: 'h2'
       subTitle: ''
       prose: |-
-        [Objekt 2026.003.01](/de/werke/2026.003.01/) — Karton mit Pappmaché-Ton und Papierröhrchen.
+        [Objekt 2026.03.001](/de/werke/2026.03.001/) — Karton mit Pappmaché-Ton und Papierröhrchen.
 
-        [Objekt 2026.003.02](/de/werke/2026.003.02/) — Laminierte Kartonstreifen mit Pappmaché-Rücken.
+        [Objekt 2026.03.002](/de/werke/2026.03.002/) — Laminierte Kartonstreifen mit Pappmaché-Rücken.
 
-        [Objekt 2026.003.03](/de/werke/2026.003.03/) — Laminierte Kartonpaneele mit Treibholz.
+        [Objekt 2026.03.003](/de/werke/2026.03.003/) — Laminierte Kartonpaneele mit Treibholz.
 
   - sectionType: collection-links
     collectionName: 'studio-notizen'

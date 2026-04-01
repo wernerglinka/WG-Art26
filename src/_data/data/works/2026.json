@@ -1,23 +1,37 @@
 [
   {
-    "image": "/assets/images/artworks/thumbnails/2026/2026.003.01.jpg",
-    "title": "Object 2026.003.01",
+    "image": "/assets/images/artworks/thumbnails/2026/2026.03.001.jpg",
+    "title": "Object 2026.03.001",
     "details": "Wall sculpture, paper mâché clay on cardboard with paper tubes and tile spacers",
     "date": "2026",
-    "link": "/works/2026.003.01"
+    "link": "/works/2026.03.001"
   },
   {
-    "image": "/assets/images/artworks/thumbnails/2026/2026.003.02.jpg",
-    "title": "Object 2026.003.02",
+    "image": "/assets/images/artworks/thumbnails/2026/2026.03.002.jpg",
+    "title": "Object 2026.03.002",
     "details": "Wall sculpture, laminated cardboard strips with paper mâché clay spine and grommets",
     "date": "2026",
-    "link": "/works/2026.003.02"
+    "link": "/works/2026.03.002"
   },
   {
-    "image": "/assets/images/artworks/thumbnails/2026/2026.003.03.jpg",
-    "title": "Object 2026.003.03",
+    "image": "/assets/images/artworks/thumbnails/2026/2026.03.003.jpg",
+    "title": "Object 2026.03.003",
     "details": "Wall sculpture, laminated cardboard panels with driftwood",
     "date": "2026",
-    "link": "/works/2026.003.03"
+    "link": "/works/2026.03.003"
+  },
+  {
+    "image": "/assets/images/artworks/thumbnails/2026/2026.03.004.JPG",
+    "title": "Object 2026.03.004",
+    "details": "9 x 24 x 1 inches, Assemblage, shredded paper with wood glue and lacquer",
+    "date": "2026",
+    "link": "/works/2026.03.004"
+  },
+  {
+    "image": "/assets/images/artworks/thumbnails/2026/2026.03.005.JPG",
+    "title": "Object 2026.03.005",
+    "details": "9 x 24 x 1 inches, Assemblage, wire mesh with ash, urethane, and shredded paper",
+    "date": "2026",
+    "link": "/works/2026.03.005"
   }
 ]

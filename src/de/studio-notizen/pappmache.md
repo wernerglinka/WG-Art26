@@ -117,9 +117,9 @@ sections:
       titleTag: 'h2'
       subTitle: ''
       prose: |-
-        [Objekt 2026.003.01](/de/werke/2026.003.01/) — Pappmaché-Ton auf Karton mit Papierröhrchen.
+        [Objekt 2026.03.001](/de/werke/2026.03.001/) — Pappmaché-Ton auf Karton mit Papierröhrchen.
 
-        [Objekt 2026.003.02](/de/werke/2026.003.02/) — Laminierter Karton mit Pappmaché-Rücken.
+        [Objekt 2026.03.002](/de/werke/2026.03.002/) — Laminierter Karton mit Pappmaché-Rücken.
 
   - sectionType: collection-links
     collectionName: 'studio-notizen'

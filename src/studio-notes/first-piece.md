@@ -106,7 +106,7 @@ sections:
       titleTag: 'h2'
       subTitle: ''
       prose: |-
-        [Object 2026.003.02](/works/2026.003.02/) — The first cardboard and paper mâché assembly.
+        [Object 2026.03.002](/works/2026.03.002/) — The first cardboard and paper mâché assembly.
 
   - sectionType: collection-links
     collectionName: 'studio-notes'

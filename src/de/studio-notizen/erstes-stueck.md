@@ -106,7 +106,7 @@ sections:
       titleTag: 'h2'
       subTitle: ''
       prose: |-
-        [Objekt 2026.003.02](/de/werke/2026.003.02/) — Die erste Karton- und Pappmaché-Assemblage.
+        [Objekt 2026.03.002](/de/werke/2026.03.002/) — Die erste Karton- und Pappmaché-Assemblage.
 
   - sectionType: collection-links
     collectionName: 'studio-notizen'

@@ -105,11 +105,11 @@ sections:
       titleTag: 'h2'
       subTitle: ''
       prose: |-
-        [Object 2026.003.01](/works/2026.003.01/) — Cardboard with paper mâché clay and paper tubes.
+        [Object 2026.03.001](/works/2026.03.001/) — Cardboard with paper mâché clay and paper tubes.
 
-        [Object 2026.003.02](/works/2026.003.02/) — Laminated cardboard strips with paper mâché clay spine.
+        [Object 2026.03.002](/works/2026.03.002/) — Laminated cardboard strips with paper mâché clay spine.
 
-        [Object 2026.003.03](/works/2026.003.03/) — Laminated cardboard panels with driftwood.
+        [Object 2026.03.003](/works/2026.03.003/) — Laminated cardboard panels with driftwood.
 
   - sectionType: collection-links
     collectionName: 'studio-notes'
