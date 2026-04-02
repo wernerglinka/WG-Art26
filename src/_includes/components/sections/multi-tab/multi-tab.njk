@@ -53,12 +53,18 @@
   {% set defaultTab = tabKeyList[0] %}
 {% endif %}
 
-{# Reconstruct context so pane renderSection calls have access to all data #}
+{#
+  Reconstruct context so pane renderSection calls have access to all page-level data.
+  IMPORTANT: this list must stay in sync with the destructuring block in
+  components/_helpers/render-section.njk. If a new variable is added there,
+  add it here too — otherwise pane components will silently receive undefined.
+#}
 {% set paneContext = {
   data: data,
   collections: collections,
   mainMenu: mainMenu,
   urlPath: urlPath,
+  lang: lang,
   collection: collection,
   pagingParams: pagingParams
 } %}

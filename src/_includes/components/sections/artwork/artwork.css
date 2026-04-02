@@ -83,26 +83,12 @@
       }
     }
 
-    .dim-note {
-      font-size: 0.8em;
-      opacity: 0.6;
-      margin-inline-start: 0.25em;
-    }
-
     .status {
       text-transform: capitalize;
     }
 
     .status--available {
       color: var(--color-primary, currentColor);
-    }
-
-    .status--sold {
-      opacity: 0.6;
-    }
-
-    .status--not-for-sale {
-      opacity: 0.6;
     }
   }
 }

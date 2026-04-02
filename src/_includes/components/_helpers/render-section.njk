@@ -7,7 +7,12 @@
 #}
 
 {% macro renderSection(section, crumbs, context) %}
-  {# Extract context properties for use in included templates #}
+  {#
+    Extract context properties for use in included templates.
+    IMPORTANT: any variable added here must also be added to the paneContext
+    object in components/sections/multi-tab/multi-tab.njk, which manually
+    forwards this context to nested renderSection calls.
+  #}
   {% set data = context.data %}
   {% set collections = context.collections %}
   {% set mainMenu = context.mainMenu %}
